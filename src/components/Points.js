@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import image from '../images/raccoonClick.jpg'
 
 const Points = () => {
   const [food, setFood] = useState(0)
   const incrementFood = () =>setFood(food + 1);
   return <div>
-    {/* <img className='clicker'  src='../images/raccoonClick.jpg' alt='fat raccoon'/> */}
-    <button onClick={incrementFood}>Click Me</button>
+    <div className='App'>
+    <img onClick={incrementFood} className='clicker'  src={image} alt='fat raccoon'/>
+    <button onClick={() => alert("you got baited")}>Click Me</button>
     <h1>{food}</h1>
+    </div>
   </div>;
 };
 
